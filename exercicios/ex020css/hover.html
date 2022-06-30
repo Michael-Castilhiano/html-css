@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="css.ico" type="image/x-icon">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p{ /* o símbolo > indica que p é um filho da div*/
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: blue;
+            width: 190px;
+        }
+
+        div:hover{
+            font-weight: bold; /*para deixar negrito quando passar o mouse*/
+            color: brown;
+
+        }
+    </style>
+    <title>Exemplo de Hover</title>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse no texto abaixo</p>
+    <div>
+       Passe o mouse aqui
+       <p>TEXTO ESCONDIDO...</p>
+    </div>
+</body>
+</html>

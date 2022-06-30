@@ -1,0 +1,213 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face { /*método para adicionar uma fonte baixada*/
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype'); /*../ significa pegar a pasta anterior para pegas a fonte android, ou seja, volte uma pasta abra a pasta fontes e o arquivo*/
+    font-weight: normal;
+}
+
+*{ /*maneira global. ele pega todos os elementos dentro do html*/
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor0: #65e1b6d2;
+    --cor1: #92E092;
+    --cor2: #3DDB2C;
+    --cor3: #2FA822;
+    --cor4: #1A5C12;
+    --cor5: #123508;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+}
+
+body{
+    background-color: #65e1b6d2;
+    font-family: var(--font-padrao);
+}
+
+main p{
+    margin: 15px 0px; /*fazendo isso cria margem entre os parágrafos, pq nas configurações globais ele tira tudo*/
+    text-align: justify; /*para o texto focar alinhado*/
+    text-indent: 20px; /*recuo para início do parágrafo*/
+    line-height: 2em; /*espaçamento entre linhas*/
+    font-size: 1em; /*tamanho da fonte*/
+}
+
+main strong{
+    color: var(--cor3);
+    padding: 2px 6px;
+}
+
+header{
+   background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header h1{
+    font-weight: normal;
+    color: white;
+    font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.538);
+}
+
+header p{
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    padding-left: 10px; /*esse padding é pra naõ encostar nas bordas do site quando a tela for de outro tamanaho*/
+    padding-right: 10px;
+    margin: auto; /*necessário para colocar o max-width*/
+    margin-bottom: 20px;
+    max-width: 500px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.538);
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px; /*ajustei padding para o hover não fazer uma caixa fora do main*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.44);
+}
+
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(147, 230, 143);
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    border-radius: 3px;
+    transition-duration: .3s; /*duração da transição para fazer o background-color*/
+}
+
+a.externo::after{
+    content: '\00A0\1F517'; /*colocando emoji depois do link*/
+}
+
+main{
+    background-color: rgb(255, 255, 255);
+    min-width: 300px; /*adaptando o conteúdo*/
+    max-width: 1000px; /*adaptando o conteúdo*/
+    margin: auto;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.547);
+}
+
+main h1{
+    font-size: 1.8em;
+    font-weight: normal;
+    font-family: var(--font-android);
+    color: var(--cor4);
+}
+
+
+main h2{
+    font-weight: normal;
+    font-family: var(--font-android);
+    color: var(--cor3);
+    font-size: 1.2em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*faz de uma cor até a transparência*/
+    text-indent: 3px; /*alinhar o texto no background-image*/
+}
+
+main img{
+    width: 100%; /*ajustando imagem para ocupar 100% do espaço*/
+}
+main img.pequena{
+    display: block;
+    max-width: 350px; /*para a imagem ficar com resolução melhor*/
+    margin: auto;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--cor1);
+    color: black;
+    padding: 4px 4px; /*cima e lateral*/
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: rgb(18, 31, 223);
+}
+
+div.video{
+    background-color: var(--cor4);
+    margin: 0px -20px 20px -20px; /*top, right, bottom,left - isso faz o background-color colar no quadrado do main*/
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    margin: 10px;
+    background-color: rgba(143, 238, 187, 0.811);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.479);
+}
+
+aside h3{
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    color: white;
+    background-color: var(--cor3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+aside p{
+    padding: 8px 8px;
+}
+
+aside ul{
+    list-style-type: '\2705\00A0\00A0'; /*pegando emoji e colocando no lugar das bolinhas e dando dois espaços com : '\00A0\00A0' */
+    list-style-position: inside; /*para colocar a bolinha dentro da lista*/
+    columns: 2; /*dividir em duas colunas*/
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(18, 31, 223);
+}
+
