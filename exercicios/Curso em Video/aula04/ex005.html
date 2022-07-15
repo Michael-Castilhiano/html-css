@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: rgb(63, 123, 172);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim!</div> <!--aplicando id na div pra pegar ela embaixo no script, pode ser name ou class também-->
+    <script>
+        let p1 = document.getElementsByTagName('p')[1] // pega o primeiro parágrafo
+        document.write(p1.innerText) // innerText é o texto que está dentro do primeiro parágrafo, replicou na página
+        // se fosse usado innerHTML acima o texto viria formatado com o negrito em DOM
+        //p1.style.color = 'black' // mudando cor do parágrafo
+        //let corpo = document.body
+        //corpo.style.background = 'green' // muda background do body
+        //let div = document.getElementById('msg')
+        //div.style.background = 'black'
+        //div.innerText = 'Aguardando...' // modificando div
+        let div = document.querySelector('div#msg')
+        div.style.background = 'red'
+    </script>
+</body>
+</html>

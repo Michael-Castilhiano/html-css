@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(27, 143, 60); /* Comentário em CSS */
+            font: normal 20pt arial;
+        }
+        h1 {
+            color: black;
+        }
+        p {
+            color: rgb(41, 4, 164);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        let n1 = Number(window.prompt('Digite um número: ')) // esse comando retorna string, então converter
+        let n2 = Number(window.prompt('Digite outro número: '))
+        let soma = n1 + n2
+        window.alert(`A soma dos valores é: ${soma}` )
+    </script>
+</body>
+</html>

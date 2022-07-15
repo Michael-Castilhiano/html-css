@@ -19,10 +19,25 @@
             border: 1px solid black;
             padding: 10px;
         }
+        
+        td#num{
+            text-align: right;
+        }
+
+        tbody tr:nth-child(even){ /*faz com que pegue de duas em duas linhas e coloque um fundo colorido - odd(impar) e even(par)*/
+            background-color: rgba(139, 136, 136, 0.496);
+        }
 
         thead, tfoot{
-            background-color: grey;
+            background-color: rgb(50, 49, 49);
             color: white;
+        }
+
+        caption{
+            background-color: rgba(128, 128, 128, 0.356);
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.5em;
         }
     </style>
 </head>
@@ -31,6 +46,7 @@
     <!--
         Anatomia para tabelas grandes
         table
+            caption - legenda da tabela
             thead
                 tr, td, th
             tbody
@@ -39,30 +55,47 @@
                 tr, td, th
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td>45 919 049</td>   
+                <td id="num">45 919 049</td>   
             </tr>
             <tr>
                 <td>Minas Gerais</td>
-                <td>21 168 791</td>
+                <td id="num">21 168 791</td>
             </tr>
             <tr>
                 <td>Rio de janeiro</td>
-                <td>17 264 943</td>
+                <td id="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td id="num">1 120 049</td>   
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td id="num">3 212 049</td>   
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td id="num">5 741 049</td>   
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td id="num">7 500 049</td>   
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Toral de Habitantes</th>
-                <td>0000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td id="num">0000</td>
             </tr>
         </tfoot>
     </table>
